@@ -8,7 +8,7 @@ def home():
 
 @app.route('/skill', methods=['POST'])
 def skill():
-    res = {
+    result = {
         "version": "2.0",
         "template": {
             "outputs": [
@@ -20,7 +20,7 @@ def skill():
             ]
         }
     }
-    response = make_response(jsonify(res))
+    response = make_response(jsonify(result))
     response.headers['Content-Type'] = 'application/json; charset=utf-8'
     return response
 
