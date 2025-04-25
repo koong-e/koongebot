@@ -8,7 +8,7 @@ def home():
 
 @app.route('/skill', methods=['POST'])
 def skill():
-    return jsonify({
+    res = {
         "version": "2.0",
         "template": {
             "outputs": [
@@ -19,7 +19,8 @@ def skill():
                 }
             ]
         }
-    })
+    }
+    return jsonify(res)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=10000)
