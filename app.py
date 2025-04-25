@@ -21,9 +21,9 @@ def skill():
             ]
         }
     }
-    response = make_response(jsonify(result))
-    response.headers['Content-Type'] = 'application/json; charset=utf-8'
-    return response
+    res = make_response(jsonify(result))
+    res.headers['Content-Type'] = 'application/json; charset=utf-8'
+    return res
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
