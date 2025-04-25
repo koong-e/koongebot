@@ -14,4 +14,15 @@ def skill():
             "outputs": [
                 {
                     "simpleText": {
-                        "text": "멍멍! 쿵
+                        "text": "멍멍! 쿵이예요!"
+                    }
+                }
+            ]
+        }
+    }
+    response = make_response(jsonify(res))
+    response.headers['Content-Type'] = 'application/json; charset=utf-8'
+    return response
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=10000)
